@@ -4,6 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "server": "ts-node ./src/server",
     "proto": "sh ./scripts/build_protobuf_client.sh"
   },
   "devDependencies": {
