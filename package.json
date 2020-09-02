@@ -5,6 +5,7 @@
   "license": "MIT",
   "scripts": {
     "server": "ts-node ./src/server",
+    "client": "ts-node ./src/client",
     "proto": "sh ./scripts/build_protobuf_client.sh"
   },
   "devDependencies": {

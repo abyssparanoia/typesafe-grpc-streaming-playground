@@ -12,14 +12,12 @@ const users: ServerDuplexStream<Message, Message>[] = [];
 
 class ServerImpl implements IChatServer {
   public join(stream: ServerDuplexStream<Message, Message>): void {
-    stream.on("data", (_: Message) => {
-      console.log("join now");
-      users.push(stream);
-      const msg = new Message();
-      msg.setText("new user joined ...");
-      msg.setUser("Server");
-      notifyChat(msg);
-    });
+    console.log("join now");
+    users.push(stream);
+    const msg = new Message();
+    msg.setText("new user joined ...");
+    msg.setUser("Server");
+    notifyChat(msg);
   }
 
   public send(
